@@ -1,12 +1,9 @@
 #  Program to test functions a to j.
-#
-ONE_TEN = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]		    	#this is test run 1
-#ONE_TEN =  [12, 20, 10, 14, 54, 16, 75, 38, 79, 103]   #this is test run 2, comment
-#ONE_TEN = [1, 25, 25, 4, 5, 4, 7, 60, 9, 10]           #this is test run 3,
-                                                        #run test run 1 first, then
-                                                        #comment out test run 1 and 
-                                                        #uncomment to run test run 2 
-                                                        #and so forth for test run 3 
+
+ONE_TEN = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]		    	
+#ONE_TEN =  [12, 20, 10, 14, 54, 16, 75, 38, 79, 103]   
+#ONE_TEN = [1, 25, 25, 4, 5, 4, 7, 60, 9, 10]           
+                                                        
 
 def main() :
     print("The original data for all functions is: ", ONE_TEN)
@@ -54,9 +51,8 @@ def main() :
     print("The list has duplicates: ", hasDuplicate(ONE_TEN))
 
 
-#here are 2 sample functions for item a and b
 
-def swapFirstLast(data:list)-> list:    #works
+def swapFirstLast(data:list)-> list: 
     '''Swap the first and last element in a list.'''
     temp = data[0]
     data[0] = data[9]
@@ -64,7 +60,7 @@ def swapFirstLast(data:list)-> list:    #works
     return
                                 
 
-def shiftRight(data:list)-> list:   #works
+def shiftRight(data:list)-> list: 
     '''Shift the elements of list to the right.'''
     temp = data[9]
     length = len(data)
@@ -76,7 +72,7 @@ def shiftRight(data:list)-> list:   #works
     return 
 
         
-def replaceEven(data:list)-> list:   #works
+def replaceEven(data:list)-> list:
     '''Replace even numbers in the list with 0'''
     length = len(data)
     
@@ -86,7 +82,7 @@ def replaceEven(data:list)-> list:   #works
     return
 
 
-def replaceNeighbors(data:list)-> list: #works
+def replaceNeighbors(data:list)-> list: 
     '''For all items except ONE_TEN[0]/[9], replace with larger of its 2 neighbors'''
     length = len(data)
     for i in range(1, length - 1):
@@ -99,7 +95,7 @@ def replaceNeighbors(data:list)-> list: #works
     return
 
 
-def removeMiddle(data:list)-> list: #works
+def removeMiddle(data:list)-> list: 
     '''Removes middle element if list len is odd, removes 2 middle if list len is even'''
     length = len(data)
     middleEven = int(length/2)
@@ -115,7 +111,7 @@ def removeMiddle(data:list)-> list: #works
     return
 
 
-def evenToFront(data:list)-> list:  #works 
+def evenToFront(data:list)-> list:   
     '''Moves all even elements to the front, then preserving the order for the remaining elements'''
     newList = list(data)
     length = len(newList)
@@ -136,7 +132,7 @@ def evenToFront(data:list)-> list:  #works
     return
 
 
-def secondLargest(ONE_TEN: list)-> int: #works
+def secondLargest(ONE_TEN: list)-> int: 
     '''Returns the second largest element in the list'''
     data = list(ONE_TEN)
     data.sort(reverse=True)
@@ -144,7 +140,7 @@ def secondLargest(ONE_TEN: list)-> int: #works
     return secLargest
 
 
-def isIncreasing(ONE_TEN: list)-> bool: #works
+def isIncreasing(ONE_TEN: list)-> bool: 
     '''Returns true if the list is currently sorted in increasing order'''
     length = len(ONE_TEN)
 
@@ -155,7 +151,7 @@ def isIncreasing(ONE_TEN: list)-> bool: #works
             return False
 
 
-def hasAdjacentDuplicate(ONE_TEN:list)-> bool: #works
+def hasAdjacentDuplicate(ONE_TEN:list)-> bool: 
     '''Returns true if the list contains 2 adjacent duplicate elements'''
     length = len(ONE_TEN)
     for i in range(length -2):
@@ -165,7 +161,7 @@ def hasAdjacentDuplicate(ONE_TEN:list)-> bool: #works
             return False
 
 
-def hasDuplicate(ONE_TEN:list)-> bool: #works
+def hasDuplicate(ONE_TEN:list)-> bool: 
     '''Returns true if the list contains duplicate elements anywhere in the list'''
     setOneTen = set(ONE_TEN)
     setLength = len(setOneTen)
